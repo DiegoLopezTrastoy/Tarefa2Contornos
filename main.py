@@ -1,6 +1,7 @@
 from faker import Faker
+import random
 
-fake = Faker()
+fake = Faker("es_ES")
 
 usuarios = []
 
@@ -16,3 +17,7 @@ for num in range(15):
     del usuario
 
 print(usuarios)
+
+usuario_premiado = usuarios[random.randint(0, 14)]
+
+print(f"O usuario chamado {usuario_premiado["nome"]} foi o afortunado!")
